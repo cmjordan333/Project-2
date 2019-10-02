@@ -1,0 +1,44 @@
+    /* body {
+            background-color: black;
+        } */
+    
+    h1 {
+        color: rgb(12, 173, 167);
+        background-color: white;
+        font-family: times new roman;
+        font-weight: bold;
+    }
+    
+    img {
+        padding-top: 10px;
+        padding-right: 20px;
+        padding-bottom: 10px;
+        padding-left: 20px;
+    }
+    
+    body {
+        background-image: ("ProjectMusic-Hip-Hop.png");
+        /* background-color: #913b3b */
+    }
+    
+    footer {
+        clear: both;
+        position: relative;
+        height: 200px;
+        margin-top: -200px;
+    }
+    
+    body,
+    html {
+        height: 100%;
+        margin: 0px;
+        padding: 0px;
+    }
+    
+    #map-id {
+        /* width: 500px; */
+        height: 100%;
+        margin: 0px;
+        padding: 0px;
+        overflow: hidden;
+    }
