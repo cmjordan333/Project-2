@@ -11,35 +11,10 @@ L.tileLayer("https://api.tiles.mapbox.com/v4/{id}/{z}/{x}/{y}.png?access_token={
     accessToken: API_KEY
 }).addTo(myMap);
 
-// An array containing each city's name, location, and population
-// var cities = [{
-//         location: [40.7128, -74.0059],
-//         name: "New York",
-//         population: "8,550,405"
-//     },
-//     {
-//         location: [41.8781, -87.6298],
-//         name: "Chicago",
-//         population: "2,720,546"
-//     },
-//     {
-//         location: [29.7604, -95.3698],
-//         name: "Houston",
-//         population: "2,296,224"
-//     },
-//     {
-//         location: [34.0522, -118.2437],
-//         name: "Los Angeles",
-//         population: "3,971,883"
-//     },
-//     {
-//         location: [41.2524, -95.9980],
-//         name: "Omaha",
-//         population: "446,599"
-//     }
-// ];
+
 // Read a JSON file or API
-d3.csv('rapworldmap-artists.csv')
+// 
+d3.csv('../db/dataset/rapworldmap-artists.csv')
     .then(function(artists) {
         console.log(artists);
         // Define fun fact function
@@ -52,3 +27,32 @@ d3.csv('rapworldmap-artists.csv')
                 .addTo(myMap);
         }
     })
+
+
+//     // Loop through the cities array and create one marker for each city object
+// for (var i = 0; i < countries.length; i++) {
+
+//     // Conditionals for countries points
+//     var color = "";
+//     if (countries[i].points > 200) {
+//       color = "yellow";
+//     }
+//     else if (countries[i].points > 100) {
+//       color = "blue";
+//     }
+//     else if (countries[i].points > 90) {
+//       color = "green";
+//     }
+//     else {
+//       color = "red";
+//     }
+
+//     // Add circles to map
+//     L.circle(countries[i].location, {
+//       fillOpacity: 0.75,
+//       color: "white",
+//       fillColor: color,
+//       // Adjust radius
+//       radius: countries[i].points * 1500
+//     }).bindPopup("<h1>" + countries[i].name + "</h1> <hr> <h3>Points: " + countries[i].points + "</h3>").addTo(myMap);
+//   }
