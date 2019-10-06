@@ -52,7 +52,7 @@ function updateToolTip(chosenXAxis, circlesGroup) {
     var label = "Born:";
   }
   else {
-    var label = "First Track:";
+    var label = "1st Track:";
   }
 
   var toolTip = d3.tip()
@@ -139,7 +139,7 @@ d3.csv("rapRIP.csv", function(err, rapRIP) {
   .attr("y", 45)
   .attr("value", "career_start") // value to grab for event listener
   .classed("inactive", true)
-  .text("First Track");
+  .text("1st Track");
 
   chartGroup.append("text")
   .attr("transform", "rotate(-90)")
