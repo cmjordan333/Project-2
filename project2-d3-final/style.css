@@ -29,8 +29,8 @@
   font: 12px Courier;
   color: white;
   background: #b30f2a;
-  border: 1;
-  border-style: inset;
+  border: 5px;
+  border-style: ridge;
   border-color: rgba(255, 192, 203, 0.562);
   border-radius: 4px;
   box-shadow: 0 0 40px #b30f2a;
