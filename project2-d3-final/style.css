@@ -4,7 +4,7 @@
 
 .chart::before {
   position: absolute;
-  top: 153px;
+  top: 191px;
   left: 110px;
   z-index: -1;
   display: block;
@@ -15,18 +15,18 @@
   background-repeat: no-repeat;
   background-position: 50% 0;
   background-size: cover;
-  opacity: 0.5;
+  opacity: 0.4;
 }
 
 .tooltip {
   position: absolute;
   text-align: left;
-  width: 375px;
-  height: 145px;
+  width: 400px;
+  height: 185px;
   padding: 7px;
   padding-top: 3px;
   margin-top: 0px;
-  font: 10px Courier;
+  font: 12px Courier;
   color: white;
   background: #b30f2a;
   border: 1;
