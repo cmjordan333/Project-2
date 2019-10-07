@@ -14,7 +14,7 @@ L.tileLayer("https://api.tiles.mapbox.com/v4/{id}/{z}/{x}/{y}.png?access_token={
 
 // Read a JSON file or API
 // 
-d3.csv('../db/dataset/rapworldmap-artists.csv')
+d3.json('/api/worldmap-data')
     .then(function(artists) {
         console.log(artists);
         // Define fun fact function
@@ -23,8 +23,8 @@ d3.csv('../db/dataset/rapworldmap-artists.csv')
         for (var i = 0; i < artists.length; i++) {
             var artist = artists[i];
             L.marker([+artist['LAT '], +artist['LONG']]) //artist.location)
-                // .bindPopup("<h1>" + city.name + "</h1> <hr> <h3>Population " + city.population + "</h3>")
-                .addTo(myMap);
+            .bindPopup("<h1>" + artist.name + "</h1> <hr> <h3> Music Video: <a href='" + artist.youtube__clipExampleUrl + "' target='_blank'>" + artist.youtube__clipExampleUrl + "</a></h3>")
+            .addTo(myMap);
         }
     })
 

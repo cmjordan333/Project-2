@@ -1,7 +1,7 @@
 var factData = null;
 
 // Read a JSON file or API ../static/js/logic.js
-d3.json('../db/dataset/random-facts.json')
+d3.json('/api/randomfacts')
     .then(function(data) {
         console.log(data);
         factData = data;

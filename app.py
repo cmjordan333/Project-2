@@ -13,7 +13,6 @@ from flask_sqlalchemy import SQLAlchemy
 
 app = Flask(__name__)
 
-
 #################################################
 # Database Setup
 #################################################
@@ -30,12 +29,59 @@ app = Flask(__name__)
 # Samples_rapworldmap = Base.classes.sample_rapdata
 # Samples = Base.classes.samples
 
-
+# HOME PAGE
 @app.route("/")
 def index():
     """Return the homepage."""
     return render_template("index.html")
 
+@app.route("/lyrics")
+def lyrics():
+    """Return the lyrics page."""
+    return render_template("lyrics.html")
+
+@app.route("/rip")
+def rip():
+    """Return the rip page."""
+    return render_template("sec-comp.html")
+
+@app.route("/worldmap")
+def worldmap():
+    """Return the Worldmap page."""
+    return render_template("Worldmap.html")
+
+######## API ROUTES
+
+# rapRIP csv data into JSON
+@app.route("/api/rapRIP")
+def rapRIP():
+    # Read the CSV
+    rap_rip_df = pd.read_csv('db/dataset/rapRIP.csv').dropna()
+    # Convert it to JSON
+    data = rap_rip_df.to_dict(orient="records")
+    # Send the JSON data
+    return jsonify(data)
+
+# random facts json
+@app.route("/api/randomfacts")
+def randomfacts():
+    # Read the CSV
+    random_df = pd.read_json('db/dataset/random-facts.json')
+    # Convert it to JSON
+    data = random_df.to_dict(orient="records")
+    # Send the JSON data
+    return jsonify(data)
+
+# random facts json
+@app.route("/api/worldmap-data")
+def worldmap_data():
+    # Read the CSV
+    worldmap_data_df = pd.read_csv('db/dataset/rapworldmap-artists.csv')
+    worldmap_data_df_clean = worldmap_data_df[['name', 'LONG', 'LAT ', 'youtube__clipExampleUrl']].dropna()
+    # Convert it to JSON
+    data = worldmap_data_df_clean.to_dict(orient="records")
+    # Send the JSON data
+    return jsonify(data)
 
 # @app.route("/names")
 # def names():
