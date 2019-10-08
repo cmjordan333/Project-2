@@ -67,7 +67,7 @@ def wordcloud():
 @app.route("/api/rapRIP")
 def rapRIP():
     # Read the CSV
-    rap_rip_df = pd.read_csv('db/dataset/rapRIP.csv')
+    rip_df = pd.read_csv('db/dataset/rapRIP.csv')
 
     ### NEW LINE ###
     rap_rip_df = rip_df[['name', 'location__city', 'birth_year', 'death_year', 'career_start', 'bio__summary']].dropna()
