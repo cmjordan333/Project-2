@@ -24,30 +24,39 @@
       background-size: cover;
     }
 
-    .jumbotron {
-      background-color: black;
-      color: white;
-      margin-bottom: 0px;
-      /* color is for FONT */
-    }
   </style>
 
-  <div class="container">
+   <div class="container">
 
+    <!-- JUMBOTRON -->
+    <!-- <div class="row"> -->
+     
       <!-- NAV BAR -->
       <nav class="navbar navbar-expand-lg navbar-light bg-light">
-        <a class="navbar-brand" href="#">Navbar</a>
+        <a class="navbar-brand" href="#"></a>
         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav"
           aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
           <span class="navbar-toggler-icon"></span>
+          <nav class="navbar navbar-light" style="background-color: black;">
+  <!-- Navbar content -->
+</nav>
         </button>
         <div class="collapse navbar-collapse" id="navbarNav">
           <ul class="navbar-nav">
             <li class="nav-item active">
-              <a class="nav-link" href="/">Home <span class="sr-only">(current)</span></a>
+              <a class="nav-link" class="sr-only"> </span></a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="/Home">Home</a>
             </li>
             <li class="nav-item">
               <a class="nav-link" href="/rip">RIP</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="/lyrics">Lyrics</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="/wordcloud">Word Cloud</a>
             </li>
             <li class="nav-item">
               <!-- <a class="nav-link" href="./Worldmap.html">World Map</a> -->
@@ -61,25 +70,7 @@
         </div>
       </nav>
 
-    <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
-      <ul class="nav navbar-nav navbar-right">
-        <li class="dropdown">
-          <a href="#" class="btn btn-danger " data-toggle="dropdown" role="button" aria-haspopup="true"
-            aria-expanded="false">Visualizations <span class="caret"></span></a>
-
-          <ul class="dropdown-menu">
-            <li><a href="./first-comp.html">first comparison</a></li>
-            <li><a href="./sec-comp.html">RIP</a></li>
-            <li><a href="./Worldmap.html">World Map</a></li>
-            <li role="separator" class="divider"></li>
-
-          </ul>
-        </li>
-        <li><a href="./lyrics.html" class="btn btn-danger ">Lyrics Per Decade </a></li>
-        <li><a href="./rap.html" class="btn btn-danger ">Rap Themes</a></li>
-        <li><a target="_blank" class="btn btn-danger" href="https://github.com/cmjordan333/Project-2">Repo</a></li>
-      </ul>
-    </div>
+    
 
   </div>
 

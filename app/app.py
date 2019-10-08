@@ -35,6 +35,11 @@ def index():
     """Return the homepage."""
     return render_template("index.html")
 
+@app.route("/Home")
+def Home():
+    """Return the homepage."""
+    return render_template("index.html")
+
 @app.route("/lyrics")
 def lyrics():
     """Return the lyrics page."""
@@ -50,13 +55,22 @@ def worldmap():
     """Return the Worldmap page."""
     return render_template("Worldmap.html")
 
+@app.route("/wordcloud")
+def wordcloud():
+    """Return the rip page."""
+    return render_template("fourth-comp.html")
+
+
 ######## API ROUTES
 
 # rapRIP csv data into JSON
 @app.route("/api/rapRIP")
 def rapRIP():
     # Read the CSV
-    rap_rip_df = pd.read_csv('db/dataset/rapRIP.csv').dropna()
+    rap_rip_df = pd.read_csv('db/dataset/rapRIP.csv')
+
+    ### NEW LINE ###
+    rap_rip_df = rip_df[['name', 'location__city', 'birth_year', 'death_year', 'career_start', 'bio__summary']].dropna()
     # Convert it to JSON
     data = rap_rip_df.to_dict(orient="records")
     # Send the JSON data
@@ -72,7 +86,7 @@ def randomfacts():
     # Send the JSON data
     return jsonify(data)
 
-# random facts json
+# worldmap facts
 @app.route("/api/worldmap-data")
 def worldmap_data():
     # Read the CSV

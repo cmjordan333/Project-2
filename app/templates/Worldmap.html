@@ -1,0 +1,133 @@
+<!doctype html>
+<html lang="en">
+
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Flask Plotlyjs Example</title>
+    </head>
+
+    <!-- Required meta tags -->
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+  <!-- Bootstrap CSS -->
+  <title></title>
+
+<head>
+  <!-- Required meta tags -->
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+  <!-- Bootstrap CSS -->
+ 
+<link rel="stylesheet" href="https://unpkg.com/leaflet@1.3.3/dist/leaflet.css" integrity="sha512-Rksm5RenBEKSKFjgI3a41vrjkw4EVPlJ3+OiI65vTjIdo9brlAacEuKOiQ5OFh7cOI1bkDwLqdLw3Zg0cRJAAQ==" crossorigin="">
+  <title>World Map</title>
+  <link rel="stylesheet" href="../static/css/style.css" >
+
+
+</head>
+
+<body>
+<style>
+    body {
+      background-image: url("../static/images/ProjectMusic-Hip-Hop.png");
+      background-repeat: no-repeat;
+      background-size: cover;
+    }
+
+  </style>
+
+   <div class="container">
+
+    <!-- JUMBOTRON -->
+    <!-- <div class="row"> -->
+     
+      <!-- NAV BAR -->
+      <nav class="navbar navbar-expand-lg navbar-light bg-light">
+        <a class="navbar-brand" href="#"></a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav"
+          aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+          <nav class="navbar navbar-light" style="background-color: black;">
+  <!-- Navbar content -->
+</nav>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+          <ul class="navbar-nav">
+            <li class="nav-item active">
+              <a class="nav-link" href="#"> <i class="em em-100" aria-role="presentation" aria-label="HUNDRED POINTS SYMBOL"></i><span class="sr-only">(current)</span></a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="/Home">Home</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="/rip">RIP</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="/lyrics">Lyrics</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="/wordcloud">Word Cloud</a>
+            </li>
+            <li class="nav-item">
+              <!-- <a class="nav-link" href="./Worldmap.html">World Map</a> -->
+              <a class="nav-link" href="/worldmap">World Map</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="https://github.com/cmjordan333/Project-2">Repo</a>
+            </li>
+            <!-- ADD MORE NAV LINKS HERE -->
+          </ul>
+        </div>
+      </nav>
+
+    
+
+  </div>
+<body >
+
+
+
+  <!-- The div that holds our map -->
+  <div id="map-id"></div>
+  <!-- Optional JavaScript -->
+  <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+
+  <!-- D3 and Plotly -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/d3/5.5.0/d3.js"></script>
+  <script src="https://cdn.plot.ly/plotly-latest.min.js"></script>
+
+  <!-- <script src="{{ url_for('static', filename='js/app.js') }}"></script> -->
+  
+
+  <!-- D3 -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/d3/5.5.0/d3.js"></script>
+
+  <!-- MomentJS -->
+  <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.15.1/moment.min.js"></script>
+
+  <!-- Leaflet JavaScript -->
+  <script src="https://unpkg.com/leaflet@1.3.3/dist/leaflet.js"
+  integrity="sha512-tAGcCfR4Sc5ZP5ZoVz0quoZDYX5aCtEm/eu1KhSLj2c9eFrylXZknQYmxUssFaVJKvvc0dJQixhGjG2yXWiV9Q=="
+  crossorigin=""></script>
+
+  <!-- Icons -->
+
+  <!-- API Key -->
+  <script type="text/javascript" src="{{ url_for('static', filename='js/config.js') }}"></script>
+
+  <!-- Our JavaScript -->
+  <script type="text/javascript" src="{{ url_for('static', filename='js/logic.js') }}"></script>
+
+
+
+  <!-- CUSTOM JS -->
+  <div id="footer">
+    <p>Robben, Chris, and Thalia &copy;2019</p>
+  </div>
+</body>
+
+</html>
