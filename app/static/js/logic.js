@@ -1,6 +1,6 @@
-// Create a map object
+/// Create a map object
 var myMap = L.map("map-id", {
-    center: [15.5994, -28.6731],
+    center: [37.6462903, -97.193111],
     zoom: 3
 });
 
@@ -23,8 +23,8 @@ d3.json('/api/worldmap-data')
         for (var i = 0; i < artists.length; i++) {
             var artist = artists[i];
             L.marker([+artist['LAT '], +artist['LONG']]) //artist.location)
-            .bindPopup("<h1>" + artist.name + "</h1> <hr> <h3> Music Video: <a href='" + artist.youtube__clipExampleUrl + "' target='_blank'>" + artist.youtube__clipExampleUrl + "</a></h3>")
-            .addTo(myMap);
+                .bindPopup("<h1>" + artist.name + "<h2>" + artist.location__city + "</h1> </h2> <hr> <h3> Music Video: <a href='" + artist.youtube__clipExampleUrl + "' target='_blank'>" + artist.youtube__clipExampleUrl + "</a></h3>")
+                .addTo(myMap);
         }
     })
 

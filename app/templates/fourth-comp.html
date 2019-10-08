@@ -25,52 +25,52 @@
     <script>
             
 var data = [
-    {"x": "Mandarin chinese", "value": 1090000000},
-    {"x": "English", "value": 983000000},
-    {"x": "Hindustani", "value": 544000000},
-    {"x": "Spanish", "value": 527000000},
-    {"x": "Arabic", "value": 422000000},
-    {"x": "Malay", "value": 281000000},
-    {"x": "Russian", "value": 267000000},
-    {"x": "Bengali", "value": 261000000},
-    {"x": "Portuguese", "value": 229000000},
-    {"x": "French", "value": 229000000},
-    {"x": "Hausa", "value": 150000000},
-    {"x": "Punjabi", "value": 148000000},
-    {"x": "Japanese", "value": 129000000},
-    {"x": "German", "value": 129000000},
-    {"x": "Persian", "value": 121000000}
+    {"x": "y'all", "value": 109},
+    {"x": "Down", "value": 285},
+    {"x": "Funky", "value": 90},
+    {"x": "Party", "value": 78},
+    {"x": "Intergalactic", "value": 45},
+    {"x": "Money", "value": 44},
+    {"x": "Mic", "value": 102},
+    {"x": "rhymes", "value": 90},
+    {"x": "Mike", "value": 142},
+    {"x": "lighten", "value": 44},
+    {"x": "love", "value": 45},
+    {"x": "call", "value": 46},
+    {"x": "night", "value": 48},
+    {"x": "had", "value": 48},
+    {"x": "ass", "value": 40}
   ];
     </script>
     <script>
 anychart.onDocumentReady(function() {anychart.onDocumentReady(function() {
   var data = [
-    {"x": "Mandarin chinese", "value": 1090000000},
-    {"x": "English", "value": 983000000},
-    {"x": "Hindustani", "value": 544000000},
-    {"x": "Spanish", "value": 527000000},
-    {"x": "Arabic", "value": 422000000},
-    {"x": "Malay", "value": 281000000},
-    {"x": "Russian", "value": 267000000},
-    {"x": "Bengali", "value": 261000000},
-    {"x": "Portuguese", "value": 229000000},
-    {"x": "French", "value": 229000000},
-    {"x": "Hausa", "value": 150000000},
-    {"x": "Punjabi", "value": 148000000},
-    {"x": "Japanese", "value": 129000000},
-    {"x": "German", "value": 129000000},
-    {"x": "Persian", "value": 121000000}
+     {"x": "y'all", "value": 109},
+    {"x": "Down", "value": 285},
+    {"x": "Funky", "value": 90},
+    {"x": "Party", "value": 78},
+    {"x": "Intergalactic", "value": 45},
+    {"x": "Money", "value": 44},
+    {"x": "Mic", "value": 102},
+    {"x": "rhymes", "value": 90},
+    {"x": "Mike", "value": 142},
+    {"x": "lighten", "value": 44},
+    {"x": "love", "value": 45},
+    {"x": "call", "value": 46},
+    {"x": "night", "value": 48},
+    {"x": "had", "value": 48},
+    {"x": "ass", "value": 40}
   ];
 
  // create a tag (word) cloud chart
   var chart = anychart.tagCloud(data);
 
    // set a chart title
-  chart.title('Word count in "Song title" lyrics ')
+  chart.title('Word count for Beastie Boys lyrics')
   // set an array of angles at which the words will be laid out
   chart.angles([0])
   // enable a color range
-  chart.colorRange(true);
+  chart.colorRange(false);
   // set the color range length
   chart.colorRange().length('80%');
 
@@ -81,5 +81,13 @@ anychart.onDocumentReady(function() {anychart.onDocumentReady(function() {
     // code to create a word cloud chart will be here
 });
 </script>
+
+<div id="footer">
+		 <li class="nav-item">
+              <a class="nav-link" href="/Home">Home</a>
+            </li>
+		<p>Robben, Chris, and Thalia &copy;2019</p>
+	</div>
+
   </body>
 </html>
